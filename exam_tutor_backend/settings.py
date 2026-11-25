@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'accounts',
     'rest_framework.authtoken',
     'assesment_management',
+    'question_management',
+    
 
 ]
 

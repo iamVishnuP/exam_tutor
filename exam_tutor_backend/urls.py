@@ -19,6 +19,7 @@ from django.urls import path
 from rest_framework.authtoken.views import ObtainAuthToken
 from accounts.views import TutorSignUpView,TutorRetreieveUpdateView
 from assesment_management.views import AssesmentListCreateView,AssesmentRetreiveUpdateDeleteView
+from question_management.views import QuestionCreateView,QuestionRetreiveUpdateDeleteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -35,4 +36,9 @@ urlpatterns = [
      path('tutor/assesments/',AssesmentListCreateView.as_view()),
 
      path('tutor/assesments/<int:pk>/',AssesmentRetreiveUpdateDeleteView.as_view()),
+
+     #questions
+    path('questions/<int:pk>/questions/',QuestionCreateView.as_view()),
+    path('questions/<int:pk>/',QuestionRetreiveUpdateDeleteView.as_view()),
+
 ]
